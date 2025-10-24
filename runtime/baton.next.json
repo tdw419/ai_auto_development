@@ -1,0 +1,6 @@
+{
+  "synopsis": "```json\n{\n  \"synopsis\": \"Establish the first development goal for the GVPIE project: setting up a basic GPU pipeline using WGSL shaders and Rust host. This involves creating initial project structure, defining a simple shader, and ensuring it compiles and runs without errors.\",\n  \"patch_bundle\": [\n    {\n      \"file\": \"Cargo.toml\",\n      \"diff\": \"--- Cargo.toml\\n+++ Cargo.toml\\n@@ -0,0 +1,5 @@\\n+[package]\\n+name = \\\"gvpie\\\"\\n+version = \\\"0.1.0\\\"\\n+edition = \\\"2021\\\"\\n+\\n\"\n    },\n    {\n      \"file\": \"src/main.rs\",\n      \"diff\": \"--- src/main.rs\\n+++ src/main.rs\\n@@ -0,0 +1,5 @@\\n+use wgpu;\\n+\\n+#[tokio::main]\\n+async fn main() {\\n+    println!(\\\"Hello, GVPIE!\\\");\\n+}\\n\"\n    },\n    {\n      \"file\": \"shaders/basic.wgsl\",\n      \"diff\": \"--- shaders/basic.wgsl\\n+++ shaders/basic.wgsl\\n@@ -0,0 +1,",
+  "patch_bundle": [],
+  "verification_hints": [],
+  "open_issues": []
+}
