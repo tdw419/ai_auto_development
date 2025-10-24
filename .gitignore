@@ -4,3 +4,5 @@ runtime/
 __pycache__/
 *.pyc
 .DS_Store
+dist/
+src/vista_time_utils.egg-info/

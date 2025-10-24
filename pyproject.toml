@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vista-time-utils"
+dynamic = ["version"]
+description = "Enterprise-grade timezone utilities for AI and agentic systems"
+readme = "README.md"
+authors = [
+    { name = "VISTA AI Systems", email = "vista@example.com" }
+]
+license = "MIT"
+keywords = ["timezone", "datetime", "utc", "ai", "agents", "vista"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = []
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/your-username/vista"
+Documentation = "https://vista-time-utils.readthedocs.io"
+Repository = "https://github.com/your-username/vista"
+"Bug Tracker" = "https://github.com/your-username/vista/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+    "black",
+    "isort",
+    "mypy",
+]
+
+[tool.setuptools_scm]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
