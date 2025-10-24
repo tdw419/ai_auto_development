@@ -1,0 +1,11 @@
+INPUT:
+- Repo SHA: {{repo_sha}}
+- Builder baton: {{baton_json}}
+
+CHECKS RUN:
+- Shader compile: {{shader_compile_outcome}}
+- Lint/tests: {{test_outcome}}
+- Domain probes: {{probe_notes}}
+
+OUTPUT FORMAT (JSON):
+{ "pass": true|false, "defect": { ... optional ... }, "notes": "..." }

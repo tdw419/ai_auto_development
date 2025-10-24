@@ -1,1 +1,6 @@
-.venv/\ndata/\nruntime/\n*.pyc\n__pycache__/\n.DS_Store
+.venv/
+data/
+runtime/
+__pycache__/
+*.pyc
+.DS_Store
