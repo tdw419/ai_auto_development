@@ -1,0 +1,35 @@
+{
+  "llm": {
+    "base_url": "http://localhost:1234/v1",
+    "model": "local-model",
+    "timeout": 300,
+    "temperature": 0.7,
+    "max_tokens": 4000,
+    "top_p": 0.9
+  },
+  "embedder": {
+    "model_name": "text-embedding-qwen3-embedding-0.6b",
+    "base_url": "http://localhost:1234/v1",
+    "embedding_dim": 768
+  },
+  "agent": {
+    "builder_max_duration_minutes": 20,
+    "builder_token_limit": 4000,
+    "verifier_max_duration_minutes": 10,
+    "verifier_run_tests": true,
+    "verifier_run_lint": true,
+    "verifier_run_coherence_check": true,
+    "max_retries": 2,
+    "escalation_threshold": 3,
+    "token_budget": 100000
+  },
+  "database": {
+    "db_path": "./data/lancedb",
+    "cleanup_days": 30
+  },
+  "repo_path": ".",
+  "log_level": "INFO",
+  "log_file": "./logs/agent_system.log",
+  "use_mock_llm": false,
+  "use_mock_tests": false
+}

@@ -1,0 +1,31 @@
+TASK OBJECT (authoritative; follow strictly):
+{{task_json}}
+
+GOAL:
+{{next_goal}}
+
+STATE SYNOPSIS:
+{{state_synopsis}}
+
+OPEN ISSUES:
+{{open_issues_json}}
+
+RETRIEVED CONTEXT (from LanceDB):
+{{retrieved_snippets}}
+
+HARD CONSTRAINTS:
+- Only use the tools listed in allowed_tools.
+- Respect every item in constraints exactly.
+- Deliver all success_metrics within the time budget (duration_minutes).
+- Output MUST match output_contract.format and contain every field listed.
+- Keep token usage low; prefer diffs to prose.
+- Pass existing tests/lints.
+
+OUTPUT FORMAT (JSON):
+{ "synopsis": "...", "patch_bundle": [...], "verification_hints": [...], "open_issues": [...], "commit_suggestion": "..." }
+
+RULES:
+- The `synopsis` field MUST be a plain-text paragraph (no JSON, no markdown fences).
+- `patch_bundle` contains objects with `file` and unified diff string; use an empty array if you made no changes.
+- `verification_hints` and `open_issues` must be short bullet strings relevant to this sprint.
+- `commit_suggestion` should be a concise conventional commit summary.
