@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import json
 import os
-from typing import Any, Dict
+from typing import Any, Dict, Optional
 
 import requests
 
@@ -20,7 +20,7 @@ DEFAULT_MODEL = os.getenv("CHAT_MODEL", "qwen2.5-7b-instruct")
 class LLMClient:
     """Simple wrapper around LM Studio HTTP API with graceful fallbacks."""
 
-    def __init__(self, model: str | None = None):
+    def __init__(self, model: Optional[str] = None):
         self.model = model or DEFAULT_MODEL
         self.cache = get_cache()
 
@@ -86,7 +86,7 @@ class LLMClient:
     # ------------------------------------------------------------------
     # Internal helpers
     # ------------------------------------------------------------------
-    def _compose_cache_prompt(self, system_message: str, user_prompt: str, response_format: str | None) -> str:
+    def _compose_cache_prompt(self, system_message: str, user_prompt: str, response_format: Optional[str]) -> str:
         payload = {
             "system": system_message,
             "user": user_prompt,
@@ -100,7 +100,7 @@ class LLMClient:
         system_message: str,
         temperature: float,
         *,
-        response_format: str | None,
+        response_format: Optional[str],
     ) -> str:
         payload = {
             "model": self.model,

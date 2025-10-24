@@ -8,7 +8,7 @@ import logging
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 
 # ensure project root on path
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -140,7 +140,7 @@ class VerifierOrchestrator:
             logger.debug("Unable to cache verification result: %s", exc)
 
 
-def run_verifier(task_context: Dict[str, Any] | None = None) -> Dict[str, Any]:
+def run_verifier(task_context: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
     """Convenience wrapper returning simplified outcome used by other agents."""
     orchestrator = VerifierOrchestrator(Path("."))
     result = orchestrator.run(task_context or {})

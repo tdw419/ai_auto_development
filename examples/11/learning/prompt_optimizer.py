@@ -10,7 +10,7 @@ import sqlite3
 from collections import defaultdict
 from datetime import timedelta
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 from utils.time_utils import to_iso, utc_now
 
@@ -281,7 +281,7 @@ class PromptOptimizer:
             trend = "stable"
         return {"trend": trend, "improvement": improvement}
 
-    def _period_performance(self, days: int) -> Dict[str, Any] | None:
+    def _period_performance(self, days: int) -> Optional[Dict[str, Any]]:
         cutoff = to_iso(utc_now() - timedelta(days=days))
         if not PERFORMANCE_DB.exists():
             return None

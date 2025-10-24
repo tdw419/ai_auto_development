@@ -46,7 +46,7 @@ def is_expired(iso_ts: str, *, grace_seconds: int = 0) -> bool:
     return ts <= threshold
 
 
-def format_duration(start_iso: str, end_iso: str | None = None) -> str:
+def format_duration(start_iso: str, end_iso: Optional[str] = None) -> str:
     """Human readable duration between two ISO timestamps."""
     start = from_iso(start_iso)
     end = from_iso(end_iso) if end_iso else utc_now()

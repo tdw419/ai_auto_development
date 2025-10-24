@@ -143,7 +143,7 @@ class IntelligentCache:
         result: Dict[str, Any],
         *,
         ttl_hours: int = 12,
-        task_id: str | None = None,
+        task_id: Optional[str] = None,
         metadata: Optional[Dict[str, Any]] = None,
     ) -> None:
         payload = {

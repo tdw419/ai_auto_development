@@ -13,7 +13,7 @@ import sqlite3
 from collections import Counter, defaultdict
 from datetime import timedelta
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 from utils.time_utils import to_iso, utc_now
 
@@ -25,7 +25,7 @@ LEDGER_DB_PATH = Path("data/verification_ledger.db")
 class FailurePatternAnalyzer:
     """Analyse verification history and predict risk for upcoming tasks."""
 
-    def __init__(self, ledger_path: Path | None = None) -> None:
+    def __init__(self, ledger_path: Optional[Path] = None) -> None:
         self.ledger_path = ledger_path or LEDGER_DB_PATH
 
     # ------------------------------------------------------------------ #
@@ -118,7 +118,7 @@ class FailurePatternAnalyzer:
         )
 
         records: List[Dict[str, Any]] = []
-        current: Dict[str, Any] | None = None
+        current: Optional[Dict[str, Any]] = None
 
         for row in cursor.fetchall():
             row_dict = dict(row)
