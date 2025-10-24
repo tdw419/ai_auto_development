@@ -42,5 +42,5 @@ jobs:
 
       - name: Ensure no datetime warnings
         run: |
-          python -W error::DeprecationWarning -c "import examples.11.utils.time_utils"
+          python -W error::DeprecationWarning -c "import importlib; importlib.import_module('examples.11.utils.time_utils')"
           echo "✅ No datetime warnings detected"
