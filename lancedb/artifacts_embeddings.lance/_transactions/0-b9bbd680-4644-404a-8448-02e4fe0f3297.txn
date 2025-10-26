@@ -1,0 +1,5 @@
+$b9bbd680-4644-404a-8448-02e4fe0f3297\xb2\x8d"id \xff\xff\xff\xff\xff\xff\xff\xff\xff*string8Zdefault,
+project_id \xff\xff\xff\xff\xff\xff\xff\xff\xff*string8Zdefault,
+agent_type \xff\xff\xff\xff\xff\xff\xff\xff\xff*string8Zdefault/artifact_type \xff\xff\xff\xff\xff\xff\xff\xff\xff*string8Zdefault$ts \xff\xff\xff\xff\xff\xff\xff\xff\xff*string8Zdefault=vector \xff\xff\xff\xff\xff\xff\xff\xff\xff*fixed_size_list:float:38408Zdefault)preview \xff\xff\xff\xff\xff\xff\xff\xff\xff*string8Zdefault"!
+lance.auto_cleanup.interval20"'
+lance.auto_cleanup.older_than14days
