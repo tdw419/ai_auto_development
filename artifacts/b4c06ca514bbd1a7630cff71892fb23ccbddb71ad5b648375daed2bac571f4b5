@@ -1,0 +1,10 @@
+{
+  "findings": [],
+  "scanned_artifacts": [
+    "blog_code_v1"
+  ],
+  "scanner": "bandit",
+  "scanner_versions": {
+    "bandit": "bandit 1.8.6\n  python version = 3.12.12 (main, Oct 10 2025, 18:25:30) [GCC 13.3.0]"
+  }
+}

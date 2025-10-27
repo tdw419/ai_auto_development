@@ -1,0 +1,11 @@
+[
+    {
+        "task_id": "crud_api_hello_world",
+        "project_id": "crud_api",
+        "role": "api_arch",
+        "goal": "Create a hello world script for the crud_api project",
+        "inputs": {},
+        "deliverables": ["hello_world.py"],
+        "acceptance": ["The script runs without errors"]
+    }
+]

@@ -1,0 +1,288 @@
+Metadata-Version: 2.4
+Name: vista-time-utils
+Version: 0.1.dev2+g2227e884e
+Summary: Enterprise-grade timezone utilities for AI and agentic systems
+Author-email: VISTA AI Systems <vista@example.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/your-username/vista
+Project-URL: Documentation, https://vista-time-utils.readthedocs.io
+Project-URL: Repository, https://github.com/your-username/vista
+Project-URL: Bug Tracker, https://github.com/your-username/vista/issues
+Keywords: timezone,datetime,utc,ai,agents,vista
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=7.0; extra == "docs"
+Requires-Dist: furo; extra == "docs"
+Requires-Dist: myst-parser; extra == "docs"
+
+## 🎯 **What This Project Does**
+
+This is the **VISTA V-Loop** - an **autonomous, self-improving AI development system** that can write, test, debug, and improve its own code automatically.
+
+## 🤖 **Core Concept**
+
+Imagine an AI development team that:
+- **Writes code** based on your specifications
+- **Rigorously tests** its own work with multiple validation layers
+- **Finds and fixes bugs** through deep analysis
+- **Learns from mistakes** to get better over time
+- **Manages the entire development cycle** autonomously
+
+That's exactly what VISTA does.
+
+## 🔄 **The "V-Loop" Process**
+
+1. **📝 Builder Agent** - Writes code from structured task descriptions
+2. **🔍 Three-Judge Verification** - Comprehensive testing:
+   - *Probing Judge* - Runs actual tests and linting
+   - *Adversarial Judge* - Looks for security issues and edge cases
+   - *Meta Judge* - Makes final verdict and creates "defect capsules"
+3. **🧠 Deep Thinking Remediation** - If code fails:
+   - 6-step reasoning process to understand failures
+   - Learns from historical patterns
+   - Generates intelligent fixes
+4. **📊 Continuous Learning** - Tracks performance and improves over time
+
+## 🛠️ **Real-World Capabilities**
+
+**For example, VISTA can:**
+- Create Python applications from natural language descriptions
+- Build web APIs with proper error handling
+- Implement data processing pipelines
+- Fix security vulnerabilities it discovers
+- Refactor and improve existing code
+- Learn which approaches work best over time
+
+## 🎯 **Key Innovations**
+
+1. **Structured Task Objects** - Precise specifications for AI coding
+2. **Three-Judge Verification** - Comprehensive quality assurance
+3. **Defect Capsules** - Structured debugging information
+4. **Deep Thinking Remediation** - Intelligent problem-solving
+5. **Adversarial Resilience Score** - Measures system improvement
+6. **Intelligent Caching** - Optimizes performance
+7. **Timezone-Aware Architecture** - Production-ready for global use
+
+## 📦 **Recent Achievement: `vista-time-utils`**
+
+We just extracted and packaged the **enterprise-grade timezone utilities** that power VISTA into a standalone PyPI package. This solves real problems like:
+
+- ❌ Naive datetime objects causing silent bugs
+- ❌ Mixed timezones breaking distributed systems
+- ❌ Inconsistent timestamp formats across services
+- ✅ **Fixed with always-UTC, always-timezone-aware operations**
+
+## 🌟 **Why It Matters**
+
+This isn't just another AI coding assistant. VISTA represents a **fundamental advancement** in autonomous software development:
+
+- **Self-Healing** - Finds and fixes its own bugs
+- **Self-Optimizing** - Improves its success rate over time
+- **Self-Learning** - Builds knowledge from historical patterns
+- **Production-Ready** - Robust architecture for real-world use
+
+## 🚀 **Current Status**
+
+**The system is fully operational and production-ready:**
+- ✅ Complete V-Loop implementation
+- ✅ Comprehensive test suite
+- ✅ CI/CD pipeline
+- ✅ Professional documentation
+- ✅ Packaged utilities for broader use
+- ✅ Enterprise-grade timezone handling
+
+## 💡 **In Simple Terms**
+
+**VISTA is like having an AI software development team that never sleeps, constantly improves, and rigorously quality-checks its own work - all while learning from every success and failure.**
+
+It's pushing the boundaries of what's possible in autonomous AI-driven software development! 🎯
+
+
+
+
+
+
+
+# VISTA Time Utilities 🕐
+
+[![PyPI version](https://img.shields.io/pypi/v/vista-time-utils.svg)](https://pypi.org/project/vista-time-utils/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/vista-time-utils.svg)](https://pypi.org/project/vista-time-utils/)
+[![CI Status](https://github.com/tdw419/ai_auto_development/actions/workflows/vista-ci.yml/badge.svg)](https://github.com/tdw419/ai_auto_development/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+**Enterprise-grade timezone handling for AI systems and distributed applications.**
+Born from the VISTA V-Loop project, these utilities solve real-world datetime problems in production AI systems.
+
+## Why VISTA Time?
+
+> ⚠️ **Traditional Python datetime pitfalls**
+>
+> ```python
+> from datetime import datetime
+>
+> naive_time = datetime.now()            # ❌ Naive, no timezone!
+> utc_naive = datetime.utcnow()          # ❌ Deprecated and still naive
+> local_str = datetime.fromtimestamp(ts) # ❌ Depends on system settings
+> ```
+>
+> ✅ **VISTA Time fixes this**
+>
+> ```python
+> from vista_time import get_current_utc_time
+>
+> safe_time = get_current_utc_time()     # ✅ Always UTC, always aware
+> print(safe_time)                       # 2025-10-24T02:30:00+00:00
+> ```
+
+## Features
+
+- ✨ **UTC-First** – All operations return timezone-aware UTC datetimes
+- 🌐 **ISO 8601** – Consistent timestamp formatting across systems
+- 🔧 **Zero Dependencies** – Pure Python standard library implementation
+- 🐍 **Python 3.8+** – Broad compatibility support
+- 📚 **Type Hints** – Full typing support for better development
+- 🔄 **Legacy Compat** – Seamless integration with existing systems
+- 🚀 **Production Ready** – Battle-tested in AI agent systems
+
+## Quick Install
+
+```bash
+pip install vista-time-utils
+```
+
+## 60‑Second Quickstart
+
+```python
+from vista_time import (
+    get_current_utc_time,
+    to_iso_format,
+    create_future_timestamp,
+    is_expired,
+)
+
+# 🕐 Current time (UTC, timezone-aware)
+current = get_current_utc_time()
+print(f"Current: {to_iso_format(current)}")
+
+# ⏰ Cache / TTL handling
+cache_until = create_future_timestamp(hours=24)
+print(f"Expired? {is_expired(cache_until)}")  # False
+
+# 🔄 Safe round-trip conversions
+iso_str = to_iso_format(current)
+parsed = from_iso_format(iso_str)
+assert parsed == current
+```
+
+## Common Use Cases
+
+### 🤖 AI & Agent Systems
+```python
+from vista_time import get_current_utc_time, create_future_timestamp, is_expired
+
+class AIAgent:
+    def __init__(self):
+        self.deadline = create_future_timestamp(minutes=30)
+
+    def execute(self):
+        if is_expired(self.deadline):
+            raise TimeoutError("Agent task exceeded deadline")
+        start = get_current_utc_time()
+        # ... perform task ...
+        end = get_current_utc_time()
+        return start, end
+```
+
+### 🌐 Web APIs & Services
+```python
+from vista_time import get_current_utc_time, to_iso_format
+
+def build_response(payload):
+    return {
+        "data": payload,
+        "timestamp": to_iso_format(get_current_utc_time()),
+    }
+```
+
+### 📊 Data Pipelines & ETL
+```python
+from vista_time import format_duration, to_iso_format, get_current_utc_time
+
+start = get_current_utc_time()
+# ... run pipeline ...
+end = get_current_utc_time()
+
+print(f"Pipeline duration: {format_duration(to_iso_format(start), to_iso_format(end))}")
+```
+
+## Migrating from Legacy Systems
+
+### From VISTA Internal Utilities
+```python
+# OLD:
+# from examples.11.utils.time_utils import get_current_utc_time
+
+# NEW:
+from vista_time import get_current_utc_time
+```
+
+### Legacy Shim for Complex Systems
+```python
+from vista_time.compat import legacy_shim
+
+current = legacy_shim.get_current_utc_time()
+iso = legacy_shim.to_iso_format(current)
+```
+
+## API Reference
+
+Core helpers available from `vista_time`:
+
+| Function | Description |
+|----------|-------------|
+| `get_current_utc_time()` | Current UTC time (timezone-aware) |
+| `to_iso_format(dt)` | Convert datetime to ISO 8601 string |
+| `from_iso_format(iso)` | Parse ISO string into UTC datetime |
+| `create_future_timestamp(...)` | Generate future ISO timestamp |
+| `is_expired(iso, buffer_seconds=0)` | Check expiration with optional buffer |
+| `format_duration(start_iso, end_iso=None)` | Human readable duration |
+
+## Development
+
+```bash
+pip install -e ".[dev]"
+pytest
+black src/
+isort src/
+```
+
+## Documentation
+
+- [Quickstart Guide](docs/quickstart.md)
+- [Migration Guide](docs/guide/migration.md)
+- [Examples](docs/examples/)
+
+## Contributing
+
+We welcome contributions! Please open an issue or pull request on GitHub. For large changes, start a discussion first so we can help.
+
+## License
+
+MIT License – see [LICENSE](LICENSE) for details.

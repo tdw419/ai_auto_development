@@ -1,0 +1,11 @@
+[
+    {
+        "task_id": "lib_fix_hello_world",
+        "project_id": "lib_fix",
+        "role": "devops",
+        "goal": "Create a hello world script for the lib_fix project",
+        "inputs": {},
+        "deliverables": ["hello_world.py"],
+        "acceptance": ["The script runs without errors"]
+    }
+]

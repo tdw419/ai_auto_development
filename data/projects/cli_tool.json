@@ -1,0 +1,11 @@
+[
+    {
+        "task_id": "cli_tool_hello_world",
+        "project_id": "cli_tool",
+        "role": "devops",
+        "goal": "Create a hello world script for the cli_tool project",
+        "inputs": {},
+        "deliverables": ["hello_world.py"],
+        "acceptance": ["The script runs without errors"]
+    }
+]

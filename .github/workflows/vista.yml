@@ -1,0 +1,32 @@
+name: vista-vloop
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -U pip
+          pip install bandit pytest
+          pip install -e .
+
+      - name: Run tests
+        run: |
+          python test_v2_migration.py
+
+      - name: Run CLI demo
+        run: |
+          python -m vista.cli runners
+
+      - name: Security scan (self-check)
+        run: |
+          python -m vista.cli scan --project vista-self-check --code-artifacts demo_code --json

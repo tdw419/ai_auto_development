@@ -1,0 +1,11 @@
+[
+    {
+        "task_id": "etl_pipeline_hello_world",
+        "project_id": "etl_pipeline",
+        "role": "data_eng",
+        "goal": "Create a hello world script for the etl_pipeline project",
+        "inputs": {},
+        "deliverables": ["hello_world.py"],
+        "acceptance": ["The script runs without errors"]
+    }
+]

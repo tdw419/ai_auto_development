@@ -1,0 +1,35 @@
+{
+  "evaluation_timestamp": 1761533044.2157295,
+  "results": [
+    {
+      "project_id": "cli_tool",
+      "duration": 1.5450539588928223,
+      "success_rate": 1.0
+    },
+    {
+      "project_id": "crud_api",
+      "duration": 4.223698139190674,
+      "success_rate": 1.0
+    },
+    {
+      "project_id": "blog",
+      "duration": 3.5312483310699463,
+      "success_rate": 1.0
+    },
+    {
+      "project_id": "lib_fix",
+      "duration": 2.1175568103790283,
+      "success_rate": 1.0
+    },
+    {
+      "project_id": "etl_pipeline",
+      "duration": 3.1976242065429688,
+      "success_rate": 1.0
+    }
+  ],
+  "summary": {
+    "total_projects": 5,
+    "avg_duration": 2.923036289215088,
+    "avg_success_rate": 1.0
+  }
+}

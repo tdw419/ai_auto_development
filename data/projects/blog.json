@@ -1,0 +1,11 @@
+[
+    {
+        "task_id": "blog_hello_world",
+        "project_id": "blog",
+        "role": "data_eng",
+        "goal": "Create a hello world script for the blog project",
+        "inputs": {},
+        "deliverables": ["hello_world.py"],
+        "acceptance": ["The script runs without errors"]
+    }
+]
